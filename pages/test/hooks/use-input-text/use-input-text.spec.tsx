@@ -23,13 +23,13 @@ describe("", () => {
     result = renderHook((initial: any) => useInputText(initial), {initialProps: { atom: testAtom, errorMsgHandler,}}).result.current;
     expect(result.input).toEqual("");
     expect(result.errorMsg).toEqual(null);
+    
   })
 
   it("change state", () => {
     const longStr = "12345678901";
     testAtom = atom<string>(longStr);
     result = renderHook((initial: any) => useInputText(initial), {initialProps: { atom: testAtom, errorMsgHandler,}}).result.current;
-    
     expect(result.errorMsg).toEqual("김");
   })
 })
