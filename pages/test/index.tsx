@@ -7,8 +7,8 @@ const Test: NextPage = () => {
   const { input, onChange, errorMsg } = useInputText({ atom: testEmailAtom, errorMsgHandler })
 
   return <>
-    <input  onChange={onChange} value={input} role='input' />
-    {errorMsg}
+    <input  onChange={onChange} value={input} role='input' id='input' />
+    <span id='errorMsg'>{errorMsg}</span>
   </>
 }
 
